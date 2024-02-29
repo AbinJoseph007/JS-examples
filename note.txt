@@ -1,0 +1,423 @@
+javaScript - 
+-----------------------
+
+- used to give behaviour to the wepsite
+- can be used in both frontend and backend
+- it is Dynamically typed language - datatype of a variable changes dynamically
+- single thread programming language - line by line execution
+- it accept both procedural as well as object oriented programming
+------------------
+
+
+es6 is the latest version of javascript
+
+
+----javascript output
+
+ consol.log('content')
+ consol.log('content',var name)
+
+data types
+
+1) text -- string
+2) number -- number
+3) true or false : boolean
+
+typeof() = to check the datatype
+
+
+variables = variables are used to store data
+------------
+
+var cannot  access where they assigned in ((........))
+
+--------------------------------
+
+
+   identifiers:rules to create variables
+   --------------
+   a) starts with letters(A-Z or a-z) , dollar sign($) or underscore(_) but prefer letter
+   b) subsequent character may be letters , digits, underscore or dollar sign
+   c) two or more word - no space btw 
+                         underscore can be used in btwn two words
+                         second word can starts with capital letter
+                         numbers can also used
+   d) numbers are not allowed as the first character in names
+
+   variablename are case sensitive
+
+   syntax
+   --------
+
+   variable_name = values
+   keyword variable_name = values                      
+
+keywords
+--------
+
+1) var = re assigning keyword, values can be resigned in var - redeclaration not allowed - hoesting is allowed
+1) const = const = constant value, it cannot be resigned - no hoesting - redeclaration allowed
+3) let   = can ressign value -block level scope - no hoesting - redeclaration not allowed
+
+variable hoeisting
+--------------------
+defining a variable it is declared
+
+
+concantenation
+-----------------------
+
+datatype+second datatype
+
+string + string =string 
+number + number =number
+string + number =string
+
+
+temperate literals : provides a easy way o interpolate/insert variable and expression into string
+
+--------------------
+
+syntax 
+ `text $(variable_name)`
+
+
+operaters
+---------
+
+1) assignment operater  =
+2) arithmetic operater  = + - / * % **
+3) relation operaters   = < <= > >= == ===
+4) logical operaters 
+                                              
+        AND (&&)                 OR (||)                       NOT(!)
+        T && T =TRUE                T || T = TRUE                 !T = F           
+        T && F = FALSE              T || F = T                    !F = T
+        F && F = F                  F || F = F
+        F && T = F                  F || T = T
+
+5) incrimental(++)
+ decremental (--)
+
+ 6) shorthand operator 
+
+ += -= /= *=              
+
+ x=x+y    x+=y
+ x=x-y    x-=y
+
+7) ternary operator
+
+   condition?true:false
+
+
+
+
+18/8/23
+-------
+
+conditional statements
+----------------------
+
+1) if else
+    
+if(condition){
+   statements
+}
+else{
+    stmt
+}
+
+loop
+-----------------------
+
+to do same task repeatedly
+
+1)while----------------------- 
+ 
+      syntax
+      initial variable 
+      while(condition){
+        stmt
+        intcremental/decremental-variable updation
+      }
+
+2)
+it is used for using repeated tasks
+
+for----------------------------
+  syntax
+    for(initialization;condition;incre/dec){
+      task - statement
+    }
+
+3) nested loops :loop with in a loop
+    patterns    : important in interviews
+    ----------
+      
+
+
+    functions:
+    ----------
+       to do  tasks repeatedly at different possition of the program file
+
+    a) normal function 
+        two parts--------
+
+         1) function definition 
+         2) function call
+
+          function definition syntax
+             function function_name(arg,............,arg){
+              task statements
+             }
+             "(variables are block level : we can't access them outside the function directly)"
+
+             if we want to access them we should "return function_name" them 
+             and conlosl them outside the function
+
+
+
+    b)function call
+       function_name(arg1....................,argn)
+
+
+       function hoeisting---------------------------------
+
+    declaring var before the function definision
+    inorder to access the value - that value have to be return
+
+    b) arrow function
+    ---------------------
+      variable =(arg1,................,argn) => {stmt}
+
+      no hoisting
+
+    c) predefined function : not defined by the user/developer but cab be called at different part of the program
+    ----------------------------
+
+    eg: console.log
+        parseInt()
+        number()
+        alert()
+        typeof()
+        eval() =eval stands for evaluation mathematical equation
+    
+      globaly accessible
+
+    e) callback function :
+    ----------------------------
+
+     calling a function inside another
+
+    f)nested function
+    ----------------------------
+
+     function definition inside another function definition  
+
+     closure property of parent can be accessed by the child property cannotb be acceessed by the parent
+
+
+     synchronous function : immdiate execicution
+     asynchronous : delay delay
+     anonymous function = self execution => need not to be called
+
+     DATA STRUCTURE:
+     --------------------------
+
+     a specialised formate for organizing , processing retrieving and storing data
+     eg: array,stack,queue,list,linked list,treen,graph execute
+
+     
+     array
+     --------
+      - unlike variables array can hold more than one value/data
+      - definition :array is a single variable that can store more than one data of different 
+        datatype that are seperated by commas and enclosed with in square brackets
+     
+   
+  syntax=
+
+     variable_name = [value 1,value 2,...........valuen]
+
+     -datatype are stored AS key:value pair in the memory
+              key:index
+              value:array from 1
+
+              index = starts from 0 till length-1
+              length:property of an array that returns total number of items
+              value starts from 1
+
+              array is infinite in javascript
+
+      array methods
+      --------------
+
+      1)push : to add elements to an array at the end - no index change for existing elements 
+      2)unshift: to add elements to an array at the start- index change 
+      3)pop :  to remove the last elements
+      4)shift : remove from start point 
+
+      5)sort() : to arrange in ascending and descending order
+      6)forEach() same as that of for of  - return void
+      7)map(): to create new array having the same number of parent
+      8)reduce :it returns a single value (find the heighest lowest , average,total.....etc)
+      9)filter() :create a new array having items satisfying a specific conditions
+      10)flat() :2d-1d dimensions---------- "infinity" depth for more complexity array otherwise use numbers
+      11)find() :to find a single value from the given array 
+      12)includes() :find a single value in a given array and return false
+      13)some() : return true or false based on certain condition
+      14)splice(startIndex,deletecount,item) :to add or remove element at a particular possition
+      15)index() : to find a element of a given element
+      16)slice(index)-remove
+      17)reduceright() :con sidering from the last elemnt
+
+
+
+      differents ways to display array elements
+      ----------------------------------------
+
+      1)for 
+      2)for in == index
+      3)for of == elements
+
+      nested array
+      ------------------
+y7
+      array inside another array
+
+      string methods
+      ------------------
+
+      1)startswith() = check the first option of a string - case sensitive
+      2)endswith()  = check the end option of the string - case sensitive
+      3)substring(start,end) = to create a substring from the given string - exclude end point
+      4)toUpperCase()= to convert into capital letter
+      5)toLowerCase() = to convert into small letter
+      6)trim = remove extra space at the start and end point
+      7)slice(start,end ) = substring accept negative value - remove from back
+      8)slipt() =slipting words into different arrays
+      9)Array.from() = to convert string into an array
+      10)replace()
+      11)replaceAll()= to replace a particular character/word from a given string -to change the all matching word 
+
+      Array.prototype-------------goog
+
+
+
+      object  : can stored more than one value- gives more clarity to data
+      -----------------------
+       -ulike array it can stored more than one data with higher clarity
+       -definition : object is a single variable that can store more than one data of 
+       different datatype as key:value pair,that are seperated by commas and enclosed within curly brackets
+
+
+     creation
+      variable_name={
+         key1:value1;
+         key2:value2;
+         keyn:valuen;
+      }     
+ 
+       display :
+
+       object_name.key
+       object_name
+
+       add new item in to an object
+
+       1) object_name["key"]=value
+       2) object.assign
+
+       delete an item to objects
+      
+       1)delete object_name.key
+
+       to update item
+
+       object_name["key"]=value
+       object_name.key+=value - increment value , similar decrement (-=)
+
+
+       array of object - object inside an array
+       
+       spread operator [...,...] three dot 
+
+
+ OBJECT ORIENTED PROGRAMMING - oops
+       -------------------------------------
+
+
+       js supports procedural programing and object orientanted programing language
+       
+ basic
+ 1) class- blueprint based on which objects are created
+ 2) object-objects are created based on class
+ 3) reference-memory location where properties and method are stored
+
+ -property- the variables inside a class
+ -method- function inside a class
+ instance variable - this.property_name - to acces property or method anywhere inside the classk
+
+ class
+ ------
+
+ syntax
+ class class_name{
+
+ }
+ instance variable-this variable- to   access through out the variable
+
+ class{
+    //property -variables inside class
+   
+    // constructors- to initize the property
+    
+    // methods-functions in a class
+ }
+
+ constructors automaticallys calls
+ //__________________________________________________________________________________________________________________
+ --->pillars of oops-
+ ------------------
+ 1)inheritance-->used to access properties fromone class to another
+ 2)polymorphism
+ 3)encapsulation
+ 4)abstraction
+ -->inheritance//
+ .-used to access properties and methods from one class to another
+  parentclass(super class, base class)- class from which properties are inherited
+  child class(sub class, derived class)- class to which the properties been inherited
+
+
+  two type of inheritence
+
+  1)classical inheritence-keyword---extends
+  2) object inheritance/prototype inheritance-->_proto_
+  3) multilevel inheritance
+
+  __________________________________________________________________________________________________________________
+  polymorphism
+  poly-many
+  morphism-form
+  1)function overloading-->methods with same name different number arguments
+  --exeute depends upon arguments
+  --doesnot support function overloading
+  --but it can be achieved using spread operator(return with array)
+  2)function overriding-->methods with same name same number arguments
+
+  exception handling 
+  -------------------
+
+  exception : run time error
+  -using try-catch block
+
+  1) try - stmt that might commit error
+  2) catch - stmt that to be executed incase of errors
+  3) finally - stmt that are common to both case
+
+tommorrow-------------------------------------
+
+  datatypes in javascript
+  primitive and non-primitive
+ 
